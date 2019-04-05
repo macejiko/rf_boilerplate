@@ -1,0 +1,22 @@
+*** Settings ***
+
+Documentation  This is example of test suite
+Resource  ../config.txt
+
+Test Setup  Preconditions
+Test Teardown  Close Browser
+
+*** Keywords ***
+
+Preconditions
+  Open Browser on Main Page  ${HOME_URL}  ${BROWSER}
+
+*** Test Cases ***
+
+Test Case Example Name
+  [Documentation]  This is example of test case 
+  ...  This just checks that page loaded
+  main_page.Verify Page Loaded
+
+
+

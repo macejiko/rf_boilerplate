@@ -1,0 +1,22 @@
+*** Settings ***
+
+Documentation  This is main page of Soft Serve site 
+...  CHANGE IT WHEN START YOUR PROJECT
+
+Resource  ../libs.txt
+
+*** Variables ***
+
+${main_page.button_explore}  xpath=//a[@href='/en-us/career/grow-your-career']
+
+*** Keywords ***
+
+Click Explore Button on Main Page 
+    Click Element  ${main_page.button_explore}
+
+################################################################################################################################################
+
+Verify Page Loaded
+    [Documentation]  Verify page loaded completely
+    Wait Until Page Contains Element  ${main_page.button_explore} 
+
