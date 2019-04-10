@@ -6,22 +6,21 @@ User Guide is available [here](http://robotframework.org/robotframework/2.8.6/Ro
 
 ## How to use for new project
 
-- Do Install
-- Change pages/main_page.txt file for your project 
-- In variables.py file change `HOME_URL` for your project
-- Run Tests via `pybot` for example.txt test case
-- View Report in `report/` dir
-- Create more pages and more test_cases
-- Enjoy
+1. Install
+2. Change pages/main_page.txt file for your project
+3. In variables.py file change `HOME_URL` for your project
+4. Run Tests via `pybot` for example.txt test case
+5. View Report in `report/` dir
+6. Create more pages and more test_cases
+7. Enjoy
 
 ## Install
 
-1. virtualenv .venv && source .venv/bin/activate
-2. pip install -r requirements.txt
+1. `virtualenv .venv && source .venv/bin/activate`
+2. `pip install -r requirements.txt`
 
 ## Run Tests
-
-pybot -d report -b debug.txt test_cases/
+`pybot -d report -b debug.txt test_cases/`
 
 ## Debug and Reports 
 
@@ -55,7 +54,7 @@ Each page divided on 3 parts via RF language:
 ## Future Plans
 
 - Dockerize runner and use dockerized selenium grid
-- Write some bootstrap command that will generate files sctructure
+- Write some bootstrap command that will generate files structure
 - Record video how to run
 
 
