@@ -25,6 +25,8 @@ pybot -d report -b debug.txt test_cases/
 
 ## Debug and Reports 
 
+After test execution `report/` dir will be created with HTML reports. For another types of reports (e.g. JUNIT) you should provide appropriate options to `pybot`
+
 - HTML and all another reports will be saved to `report/` dir
 - Debug info will be in file `report/debug.txt`
 
@@ -53,7 +55,7 @@ Each page divided on 3 parts via RF language:
 ## Future Plans
 
 - Dockerize runner and use dockerized selenium grid
-- Write some boilerplate command that will generate files sctructure
+- Write some bootstrap command that will generate files sctructure
 - Record video how to run
 
 
