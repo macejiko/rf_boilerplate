@@ -7,9 +7,9 @@ User Guide is available [here](http://robotframework.org/robotframework/2.8.6/Ro
 ## How to use for new project
 
 1. Install
-2. Change pages/main_page.txt file for your project
-3. In variables.py file change `HOME_URL` for your project
-4. Run Tests via `pybot` for example.txt test case
+2. Change code in `pages/main_page.txt` file according to your project
+3. In `variables.py` file change `HOME_URL` to your project URL
+4. Run existing example test via `pybot -d report -b debug.txt test_cases/`
 5. View Report in `report/` dir
 6. Create more pages and more test_cases
 7. Enjoy
