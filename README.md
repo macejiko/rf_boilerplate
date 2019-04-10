@@ -1,4 +1,4 @@
-# Robot Framework Test Runner
+# Robot Framework Boilerplate
 
 > Template for RF test runner for fast installation and usage for new project
 
