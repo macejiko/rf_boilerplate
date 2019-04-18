@@ -2,7 +2,7 @@
 
 > Template for RF test runner for fast installation and usage for new project
 
-User Guide is available [here](http://robotframework.org/robotframework/2.8.6/RobotFrameworkUserGuide.html)
+Robot Framework User Guide is available [here](http://robotframework.org/robotframework/2.8.6/RobotFrameworkUserGuide.html)
 
 ## Prerequirements
 
