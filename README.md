@@ -56,5 +56,6 @@ Each page divided on 3 parts via RF language:
 - Dockerize runner and use dockerized selenium grid
 - Write some bootstrap command that will generate files structure
 - Record video how to run
+- Move to Python 3
 
 

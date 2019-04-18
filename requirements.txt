@@ -1,17 +1,5 @@
-six==1.10.0
-cffi==1.10.0
-pyparsing==2.2.0
-appdirs==1.4.3
 selenium==2.53.0
-pymongo==2.6.3
-PyMySQL==0.6.2
 setuptools==27.1.2
 
 robotframework==2.8.6
 robotframework-selenium2library==1.8.0
-robotframework-httplibrary==0.4.2
-robotframework-imaplibrary==0.2.3
-robotframework-pabot==0.14
-robotframework-requests==0.4.4
-robotframework-csvlibrary==0.0.2
-git+https://github.com/iPlantCollaborativeOpenSource/Robotframework-MongoDB-Library.git@4d52cd1f2477ede715e32bca879b51c329d36435
