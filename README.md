@@ -4,6 +4,11 @@
 
 User Guide is available [here](http://robotframework.org/robotframework/2.8.6/RobotFrameworkUserGuide.html)
 
+## Prerequirements
+
+- python 2.7
+- chromedriver available in $PATH from [here](http://chromedriver.chromium.org/)
+
 ## How to use for new project
 
 1. Install
