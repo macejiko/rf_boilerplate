@@ -12,9 +12,9 @@ Robot Framework User Guide is available [here](http://robotframework.org/robotfr
 ## How to use for new project
 
 1. Install
-2. Change code in `pages/main_page.txt` file according to your project
+2. Change code in `pages/main_page.robot` file according to your project
 3. In `variables.py` file change `HOME_URL` to your project URL
-4. Run existing example test via `pybot -d report -b debug.txt test_cases/`
+4. Run existing example test via `pybot -d report -b debug.robot test_cases/`
 5. View Report in `report/` dir
 6. Create more pages and more test_cases
 7. Enjoy
@@ -22,17 +22,17 @@ Robot Framework User Guide is available [here](http://robotframework.org/robotfr
 ## Install
 
 1. `virtualenv .venv && source .venv/bin/activate`
-2. `pip install -r requirements.txt`
+2. `pip install -r requirements.robot`
 
 ## Run Tests
-`pybot -d report -b debug.txt test_cases/`
+`pybot -d report -b debug.robot test_cases/`
 
 ## Debug and Reports 
 
 After test execution `report/` dir will be created with HTML reports. For another types of reports (e.g. JUNIT) you should provide appropriate options to `pybot`
 
 - HTML and all another reports will be saved to `report/` dir
-- Debug info will be in file `report/debug.txt`
+- Debug info will be in file `report/debug.robot`
 
 ## Files structure
 
@@ -40,8 +40,8 @@ After test execution `report/` dir will be created with HTML reports. For anothe
 * pages/ - dir with all web pages using Page Object pattern
 * report/ - dir with all reports (will be generated after first run of `pybot`)
 * test_cases/ - dir with all test cases
-* config.txt - file that unite all pages, variables, keywords of project. Used then in each test case
-* libs.txt - file with all libraries that we use in project
+* config.robot - file that unite all pages, variables, keywords of project. Used then in each test case
+* libs.robot - file with all libraries that we use in project
 * variables.py - file with all environment settings
 
 ## Page Object

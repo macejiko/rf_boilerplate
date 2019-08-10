@@ -3,7 +3,7 @@
 Documentation  This is main page of your site
 ...  CHANGE IT WHEN START YOUR PROJECT FROM SCRATCH
 
-Resource  ../libs.txt
+Resource  ../libs.robot
 
 *** Variables ***
 

@@ -1,7 +1,7 @@
 *** Settings ***
 
 Documentation  This is example of test suite
-Resource  ../config.txt
+Resource  ../config.robot
 
 Test Setup  Preconditions
 Test Teardown  Close Browser
@@ -14,7 +14,7 @@ Preconditions
 *** Test Cases ***
 
 Test Case Example Name
-  [Documentation]  This is example of test case 
+  [Documentation]  This is example of test case
   ...  This just checks that page loaded
   main_page.Verify Page Loaded
 
