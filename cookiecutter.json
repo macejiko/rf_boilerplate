@@ -1,5 +1,5 @@
 {
     "directory_name": "rf_tests",
     "env_url": "https://google.com",
-    "verify_text": "Sign In"
+    "verify_text": "Gmail"
 }

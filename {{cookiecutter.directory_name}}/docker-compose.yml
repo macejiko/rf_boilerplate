@@ -2,9 +2,8 @@ version: '2.1'
 
 services:
 
-  chrome-standalone:
+  chrome_standalone:
     image: selenium/standalone-chrome-debug:3.3.0
-    container_name: selenium_grid_chrome_standalone
     expose:
       - "4444"
     ports:
@@ -16,7 +15,6 @@ services:
 
   rf_runner:
     image: macejiko/robotdocker:2.7-alpine
-    container_name: rf_runner
     volumes:
       - .:/user/local
     environment:
@@ -32,6 +30,6 @@ services:
       -e not_ready
       -n bug
       --nostatusrc
-      test_cases/${TEST_CASE}"
+      test_suites/${TEST_CASE}"
 
 

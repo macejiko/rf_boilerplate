@@ -2,7 +2,7 @@
 
 import os
 
-HOME_URL = '%s' $ os.environ['ENV_URL']
+HOME_URL = '%s' % os.environ['ENV_URL']
 
 SELENIUM_GRID_HUB = os.environ['SELENIUM_GRID_HUB']
 SELENIUM_GRID_HUB_URL = 'http://%s:4444/wd/hub' % SELENIUM_GRID_HUB

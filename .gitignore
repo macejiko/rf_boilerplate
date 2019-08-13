@@ -1,7 +1,4 @@
-report
-test_report
 .DS_Store
 *.pyc
 .idea/
-.venv/
 
