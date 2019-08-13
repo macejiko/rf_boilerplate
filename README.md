@@ -12,8 +12,8 @@ Cookiecutter docs [here](https://cookiecutter.readthedocs.io/en/latest/readme.ht
 
 ## Usage
 
-1. `docker run --rm -v $(pwd):/user/local -it macejiko/dcc`
-2. Answer on user promts
+1. `docker run --rm -v $(pwd):/user/local -it macejiko/dcc` - Run cookiecutter executor (path to this repo is default there)
+2. Answer on user prompts
 3. Dir with tests should be generated now in current folder
 
 ## Future Plans
