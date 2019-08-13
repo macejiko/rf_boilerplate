@@ -8,12 +8,10 @@ Resource  main_page.robot
 
 *** Keywords ***
 
-Open Browser on Main Page
+Open Browser on Page
     [Arguments]  ${url}  ${browser}
     Open Browser  ${url}  ${browser}  remote_url=${SELENIUM_GRID_HUB_URL}
     Set Window Size  ${RESOLUTION_WIDTH}  ${RESOLUTION_HIGHT}
-    Set Selenium Speed  .2
-    Set Selenium Timeout  15
 
 Verify Page Contains Text
     [Documentation]  Searches for text on page

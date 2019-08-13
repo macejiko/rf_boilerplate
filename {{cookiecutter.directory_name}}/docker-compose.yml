@@ -1,0 +1,35 @@
+version: '2.1'
+
+services:
+
+  chrome_standalone:
+    image: selenium/standalone-chrome-debug:3.3.0
+    expose:
+      - "4444"
+    ports:
+      - "5900:5900"
+    environment:
+      - DBUS_SESSION_BUS_ADDRESS=/dev/null
+    volumes:
+      - /dev/shm:/dev/shm
+
+  rf_runner:
+    image: macejiko/robotdocker:2.7-alpine
+    volumes:
+      - .:/user/local
+    environment:
+      - ENV_URL=${ENV_URL}
+      - SELENIUM_GRID_HUB=chrome-standalone
+    command: >
+      sh -c "
+      sleep 10;
+      pybot -d report
+      ${OPTIONS}
+      -b debug.robot
+      -x rf_xunit.xml
+      -e not_ready
+      -n bug
+      --nostatusrc
+      test_suites/${TEST_CASE}"
+
+
