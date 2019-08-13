@@ -19,7 +19,7 @@ services:
       - .:/user/local
     environment:
       - ENV_URL=${ENV_URL}
-      - SELENIUM_GRID_HUB=chrome-standalone
+      - SELENIUM_GRID_HUB=chrome_standalone
     command: >
       sh -c "
       sleep 10;

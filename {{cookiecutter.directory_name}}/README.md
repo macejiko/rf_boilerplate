@@ -8,9 +8,11 @@ Robot Framework User Guide is available [here](http://robotframework.org/robotfr
 
 ## Run Tests
 
-`docker-compose up`
+`docker-compose up` will execute selenium grid containing one Google Chrome node and dockerised RF runner
 
 ## Debug and Reports 
+
+To view test execution progress connect to *127.0.0.1:5900* via any VNC viewer. Password is **'secret'**
 
 After test execution `report/` dir will be created with HTML reports. For another types of reports (e.g. JUNIT) you should provide appropriate options to `pybot`
 
