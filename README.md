@@ -12,9 +12,9 @@ Cookiecutter docs [here](https://cookiecutter.readthedocs.io/en/latest/readme.ht
 
 ## Usage
 
-1. `docker run TBD`
+1. `docker run --rm -v $(pwd):/user/local -it macejiko/dcc`
 2. Answer on user promts
-3. Dir with tests should be generated now
+3. Dir with tests should be generated now in current folder
 
 ## Future Plans
 
