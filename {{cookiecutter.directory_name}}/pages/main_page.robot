@@ -6,7 +6,7 @@ Resource  ../libs.robot
 
 *** Variables ***
 
-${main_page.verify_text}  {{cookiecutter.verify_text}}
+${main_page.verify_text}  {{cookiecutter._verify_text}}
 
 *** Keywords ***
 
