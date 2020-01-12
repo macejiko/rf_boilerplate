@@ -9,7 +9,7 @@ Robot Framework User Guide is available [here](http://robotframework.org/robotfr
 ## Run Tests
 
 - `docker-compose pull && docker-compose up --abort-on-container-exit` - Execute tests in sequent mode via one Google Chrome node + VNC server
-- `docker-compose pull && docker-compose -f docker-compose-pabot.yml up --abort-on-container-exit --scale chrome=2` - Start tests in parallel mode via pabot with **2** threads without VNC server
+- `docker-compose -f docker-compose-pabot.yml pull && docker-compose -f docker-compose-pabot.yml up --abort-on-container-exit --scale chrome=2` - Start tests in parallel mode via pabot with **2** threads without VNC server
 
 ## Debug and Reports 
 
