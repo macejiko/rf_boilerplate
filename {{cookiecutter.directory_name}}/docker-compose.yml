@@ -21,7 +21,7 @@ services:
       sh -c "
       sleep 10;
 
-      robot
+      pybot
       ${OPTIONS}
       -d report
       -b debug.robot
