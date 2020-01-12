@@ -11,7 +11,7 @@ services:
     shm_size: '2g'
 
   rf_runner:
-    image: macejiko/robotdocker:2.7-alpine
+    image: macejiko/robotdocker:3.7-alpine
     volumes:
       - .:/user/local
     environment:
@@ -21,7 +21,7 @@ services:
       sh -c "
       sleep 10;
 
-      pybot
+      robot
       ${OPTIONS}
       -d report
       -b debug.robot
