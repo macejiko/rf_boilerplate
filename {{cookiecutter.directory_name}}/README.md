@@ -1,6 +1,6 @@
 # Robot Framework Tests
 
-Robot Framework User Guide is available [here](http://robotframework.org/robotframework/2.8.6/RobotFrameworkUserGuide.html)
+Robot Framework User Guide is available [here](http://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html)
 
 ## Prerequirements
 
@@ -8,7 +8,8 @@ Robot Framework User Guide is available [here](http://robotframework.org/robotfr
 
 ## Run Tests
 
-`docker-compose up` will execute selenium grid containing one Google Chrome node and dockerised RF runner
+- `docker-compose pull && docker-compose up --abort-on-container-exit` - Execute tests in sequent mode via one Google Chrome node + VNC server
+- `docker-compose pull && docker-compose -f docker-compose-pabot.yml up --abort-on-container-exit --scale chrome=2` - Start tests in parallel mode via pabot with **2** threads without VNC server
 
 ## Debug and Reports 
 
@@ -20,19 +21,24 @@ After test execution `report/` dir will be created with HTML reports. For anothe
 - Debug info will be in file `report/debug.robot`
 
 ## Files structure
+
 ```
+├── .env                      # Default env vars. More [info](https://docs.docker.com/compose/env-file/)
+├── .gitignore
 ├── README.md
-├── config.robot             # Unites all pages, variables, keywords. Used in each test suite
-├── docker-compose.yml
-├── keywords                 # Additional keywords (e.g. ssh or mysql)
-│   └── all_keywords.robot
-├── libs.robot               # RF libraries (e.g. BuiltIn, Selenium etc.)
-├── pages                    # Web pages using Page Object pattern
+├── config.robot              # Unites all pages, variables, keywords. Used in each test suite
+├── docker-compose-pabot.yml  # Compose file for execution of Selenium Grid (hub+chrome+firefox) + pabot
+├── docker-compose.yml        # Compose file for execution of standalone chrome + VNC server + robot
+├── keywords                  # Additional keywords (e.g. ssh or mysql)
+│   ├── all_keywords.robot
+│   └── ...
+├── libs.robot                # Includes all RF libraries that used on project (e.g. BuiltIn, Selenium or self-written)
+├── pages                     # Web pages using Page Object pattern
 │   ├── all_pages.robot
-│   └── main_page.robot
-├── test_suites              # All tests
-│   └── smoke.robot
-└── variables.py             # Environment or another settings
+│   └── ...
+├── test_suites               # All tests
+│   └── ...
+└── variables.py              # Environment or another settings
 ```
 
 ## Page Object
@@ -53,9 +59,5 @@ We use such RF [tags](https://robotframework.org/robotframework/latest/RobotFram
 
 * *bug* - for all bugs reported in bug tracker system. Marked tests are uncritical
 * *not_ready* - Marked tests are excluded from execution
-
-## Future Plans
-
-- Migrate to Python3
 
 
