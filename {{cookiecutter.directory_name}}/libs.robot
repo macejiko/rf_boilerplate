@@ -4,7 +4,7 @@
 Documentation  This file loads all libs of project in one place.
 ...            All pages and keywords files load this file
 
-Library  Selenium2Library  7  6  Take Screenshot
+Library  SeleniumLibrary  7  6  Take Screenshot
 Library  String
 Library  DateTime
 Library  Collections
