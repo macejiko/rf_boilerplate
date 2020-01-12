@@ -2,12 +2,20 @@ version: '3.7'
 
 services:
 
-  chrome_standalone:
-    image: selenium/standalone-chrome-debug:3.141.59-yttrium
-    ports:
-      - "5900:5900"
+  selenium_hub:
+    image: selenium/hub:3.141.59-yttrium
+    expose:
+      - "4444"
+
+  chrome:
+    image: selenium/node-chrome:3.141.59-yttrium
+    depends_on:
+      - selenium_hub
     environment:
+      - HUB_PORT_4444_TCP_ADDR=selenium_hub
+      - HUB_PORT_4444_TCP_PORT=4444
       - DBUS_SESSION_BUS_ADDRESS=/dev/null
+      - SE_OPTS=-debug
     shm_size: '2g'
 
   rf_runner:
@@ -16,12 +24,14 @@ services:
       - .:/user/local
     environment:
       - ENV_URL=${ENV_URL}
-      - SELENIUM_GRID_HUB=chrome_standalone
+      - SELENIUM_GRID_HUB=selenium_hub
     command: >
       sh -c "
       sleep 10;
 
-      robot
+      pabot
+      --processes ${PABOT_PROCESSES}
+      --verbose
       ${OPTIONS}
       -d report
       -b debug.robot
