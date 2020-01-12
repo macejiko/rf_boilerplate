@@ -2,7 +2,7 @@
 
 > Cookiecutter Template for RF tests
 
-Robot Framework User Guide is available [here](http://robotframework.org/robotframework/2.8.6/RobotFrameworkUserGuide.html)
+Robot Framework User Guide is available [here](http://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html)
 
 Cookiecutter docs [here](https://cookiecutter.readthedocs.io/en/latest/readme.html)
 
